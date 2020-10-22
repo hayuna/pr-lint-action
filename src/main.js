@@ -7,7 +7,7 @@ async function run() {
       titleRegex = core.getInput('title-regex', {required: true}),
       titleRegexFlags = core.getInput('title-regex-flags') || 'g',
       errorMessage = core.getInput('error-message') || `Please fix your PR title to match "${titleRegex}" with "${titleRegexFlags}"`,
-      title = github.context!.payload!.pull_request!.title;
+      title = github.context.payload.pull_request.title;
 
     core.info(`Checking "${titleRegex}" with "${titleRegexFlags}" flags against the PR title: "${title}"`);
 
@@ -23,7 +23,7 @@ async function run() {
           return;
         }
 
-        const client: github.GitHub = new github.GitHub(githubToken),
+        const client = new github.GitHub(githubToken),
         pr = github.context.issue;
 
         client.pulls.createReview({

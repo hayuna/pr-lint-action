@@ -2,33 +2,8 @@
   "name": "pr-lint-action",
   "version": "1.0.4",
   "description": "PR Lint for GitHub Actions",
-  "main": "lib/main.js",
-  "scripts": {
-    "build": "tsc",
-    "format": "prettier --write src/*.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seferov/pr-lint-action.git"
-  },
-  "keywords": [
-    "actions",
-    "pr",
-    "lint"
-  ],
-  "author": "Farhad Safarov",
-  "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://github.com/seferov/pr-lint-action/issues"
-  },
-  "homepage": "https://github.com/seferov/pr-lint-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^1.1.0"
-  },
-  "devDependencies": {
-    "@types/node": "^12.12.5",
-    "prettier": "^2.1.2",
-    "typescript": "^3.8.3"
   }
 }
