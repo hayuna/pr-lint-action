@@ -1,7 +1,6 @@
 FROM node:slim
 
 COPY . .
-RUN npm uninstall
 
 RUN npm cache clean --force
 RUN npm install
